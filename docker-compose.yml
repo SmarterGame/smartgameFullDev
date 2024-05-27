@@ -1,0 +1,87 @@
+version: "3.3"
+
+services:
+  rule-engine:
+    build: 
+      context: ./ruleEngine
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./ruleEngine:/app
+    environment:
+      - MONGODB_URI=mongodb://prova:SECRET@mongodb:27017/ruleengine?authSource=admin
+    ports:
+      - 8080:8080
+      - 5005:5005
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      mqtt:
+        condition: service_healthy
+  backend:
+    build: 
+      context: ./Backend
+      dockerfile: Dockerfile.dev
+    ports:
+      - 5001:5001
+    volumes:
+      - ./Backend:/backend
+      - ./Backend/node_modules:/backend/node_modules
+    environment:
+      - MONGODB_URI=mongodb://prova:SECRET@mongodb:27017/webback?authSource=admin
+      - NODE_ENV=dev
+      - AUTH0_DOMAIN=smarter.eu.auth0.com
+      - SERVICE_SITE=https://smarter.com/email
+      - AUDIENCE=https://smartergame.com
+      - TASK_ENGINE_URL=http://rule-engine:8080/api
+      - DEPLOY_URL=http://backend:5001
+    depends_on:
+      mongodb:
+        condition: service_healthy
+  smart-game:
+    build: 
+      context: ./Frontend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./Frontend:/app
+      - ./Frontend/node_modules:/app/node_modules
+    ports:
+      - 3000:3000
+    depends_on:
+      - rule-engine
+      - backend
+  new-sensation:
+    build: 
+      context: ./new-sensation
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./new-sensation:/app
+      - ./new-sensation/node_modules:/app/node_modules
+    ports:
+      - 3001:3000
+    depends_on:
+      - rule-engine
+      - backend
+  mqtt:
+    image: emqx:5.6.1
+    healthcheck:
+      test: ["CMD", "/opt/emqx/bin/emqx", "ctl", "status"]
+      interval: 5s
+      timeout: 25s
+      retries: 5
+    ports:
+      - 1883:1883
+      - 8083:8083
+      - 8084:8084
+      - 8883:8883
+      - 18083:18083 
+  mongodb:
+    image: mongo:5.0
+    ports:
+      - 27017:27017
+    volumes:
+      - ~/apps/mongo:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=prova
+      - MONGO_INITDB_ROOT_PASSWORD=SECRET
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet

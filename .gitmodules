@@ -1,0 +1,18 @@
+[submodule "ruleEngine"]
+	path = ruleEngine
+	url = https://github.com/SmarterGame/ruleEngine
+[submodule "Backend"]
+	path = Backend
+	url = https://github.com/SmarterGame/Backend
+[submodule "Frontend"]
+	path = Frontend
+	url = https://github.com/SmarterGame/Frontend
+[submodule "new-sensation"]
+	path = new-sensation
+	url = https://github.com/SmarterGame/new-sensation
+[submodule "smarterVocabulary"]
+	path = smarterVocabulary
+	url = https://github.com/SmarterGame/smarterVocabulary
+[submodule "smartgameVocabulary"]
+	path = smartgameVocabulary
+	url = https://github.com/SmarterGame/smartgameVocabulary
