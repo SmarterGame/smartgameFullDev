@@ -1,0 +1,138 @@
+﻿Crea regole; Create rules
+Crea una nuova regola; Create a new rule 
+Nome della regola; Rule name
+Evento; Event 
+Stato; State
+Azione; Action
+APPENA; AS SOON AS 
+MENTRE; WHILE
+ALLORA; THEN
+Annulla; Cancel
+Crea regola; Create rule
+
+Le mie regole; My rules
+Cerca; Search 
+Raggruppa; Group
+
+I miei elementi di gioco; My game elements
+Riconoscimenti; Acknowledgments
+Definisci i RICONOSCIMENTI presenti nella categoria "badge".; Define the ACKNOWLEDGMENTS in the "badge" category.
+Nome; Name
+Descrizione; Description
+Classi; Classes
+Punti; Points
+Definisci i PUNTI da assegnare allo studente nella categoria "punti esperienza".; Define the POINTS to be awarded to the student in the "experience points" category.
+Punti esperienza (ghiande); Experience points (acorns)
+Nome; Name
+Quantità; Quantity
+Livelli; Levels
+Definisci i livelli esperienza; Define the experience levels
+Livelli esperienza; Experience levels
+N° livello; Level n°
+Nome; Name
+
+Nuovo gioco; New game
+Nome del gioco; Game name
+Classi; Classes
+Seleziona a quali classi si applica il gioco. Potrai modificare questa informazione anche nella pagina “I miei giochi”.; Select which classes the game applies to. You can modify this information on the "My games" page.
+Definisci livelli di gioco; Define game levels
+Seleziona la modalità in cui creare i livelli di gioco. Potrai modificare questa informazione anche nella pagina “I miei giochi”.; Select the game modality to create the game levels. You can modify this information on the "My games" page.
+Nessun livello creato; No levels created
+Creando un livello potrai far giocare i tuoi studenti con SmartGame; By creating a level, you can let your students play with SmartGame
+Crea un livello; Create a level
+Annulla; Cancel
+Crea; Create
+Aggiungi livello; Add level
+Aggiungi esercizio; Add exercise
+Esercizi contenuti nel livello; Exercises contained in the level 
+Nessun esercizio creato; No exercise created
+Crea un esercizio creando sul tasto Aggiungi esercizio in basso a sinistra; Create an exercise by clicking the “add exercise” button in the bottom left 
+Rimuovi livello; Remove leve
+Consegna; Assignment
+Scrivi la consegna; Write the assignment
+Situazione di partenza; Starting situation
+Cosa compare sullo schermo? es. 1 2 _ 4 5; What appears on the screen? e.g. 1 2 _ 4 5
+Soluzione; Solution
+Cosa compare come soluzione? es. 1 2 3 4 5;  What appears as the solution? e.g. 1 2 3 4 5
+Annulla; Cancel 
+Salva esercizio; Save exercise 
+
+I miei giochi; My games
+Giochi; Games
+Aggiungi gioco; Add game 
+Aggiungi regola; Add rule
+Seleziona modalità; Select game modality
+Individuale; Individual
+Cooperativa (attaccati); Cooperative (joint) 
+Cooperativa (staccati); Cooperative (separated)
+
+Esci; Logout
+Primitive – ogni tanto le specifiche hanno nome diverso da quello nella tabella (sto prendendo le primitive dalla tabella perché a frontend ne mancano ancora alcune)
+spegni led; turn off the led
+accendi led <colore>; turn on <color> LED 
+<colore>; <color>
+verde; green
+rosso; red
+blu; blue 
+assegna il badge <specifica>; award the badge <specify>
+fai salire di un livello (esperienza) <specifica>; level up to  (experience) level <specify>
+sblocca il livello <specifica livello> del gioco <specifica>; unlock <level specification> level  in the game <game specification>
+<level specification> può essere; the following o <N>
+assegna <quantità> punti esperienza; award <quantity> experience point(s)
+continue to the next exercise
+
+
+una tessera <tipologia> viene inserita  in posizione <specifica posizione>; a <type> tile is placed into position <specific position>
+qualsiasi; (any)
+cifra numerica <specifica>; digit <specify>
+quantità di mele <specifica>; apples quantity <specify>
+operatore <specifica>; operator <specify>
+simbolo <specifica>; symbol <specify>
+diversa da una tessera cifra numerica <specifica>; different from a digit tile <specify>
+diversa da una tessera quantità di mele <specifica>; different from an apples quantity tile <specify>
+diversa da una tessera simbolo <specifica>; different from a symbol tile <specify>
+diversa da una tessera operatore <specifica>; different from an operator tile <specify>
+<specifica smarter>; <specify smarter>
+una tessera <tipologia> viene rimossa dalla posizione <specifica posizione>; a <type> tile is removed into position <specific position>
+la sequenza <specifica ordine> <corrisponde/non corrisponde> ai valori dell’esercizio <specifica>; the <specify order> sequence of <type> <matches/does not match> the values of the exercise <specify>
+crescente; ascending order
+decrescente; descending order
+tessere qualsiasi; any tiles
+cifre; digits
+quantità mele; apples quantities
+l’espressione matematica diventa <vera/falsa>; the mathematical expression becomes <true/false>
+il badge <specifica> viene ottenuto; the badge <specify> is gained
+vengono raggiunti <N> punti esperienza; a total of <N> experience points is reached
+il livello <N> del gioco viene completato <specifica<<errori><prove>>; the level <N> of the game is completed <specify <<errors><attempts>>
+senza errori; without mistakes
+con N errori with <N> mistakes
+con meno di N errori; making less than <N> mistakes
+con più di N errori; making more than <N> mistakes
+il livello esperienza <specifica> viene raggiunto; the experience level <specify> is reached
+the exercise number <N> is completed
+
+
+la posizione <numero> è occupata da <tipologia>; the position number <N <specify>> is occupied by <type>
+1:5 <specifica smarter>; <specify smarter>
+la posizione <numero> è vuota; the position number <N <specify>> is empty
+la posizione adiacente <a destra/sinistra> della tessera appena <inserita/rimossa> è <vuota/occupata da una tessera>; the position immediately <to the right/left> of the tile that has just been <placed/removed> is <empty/occupied by a tile>
+a destra; to the right 
+a sinistra; to the left
+nelle posizioni a <destra/sinistra> della tessera appena <inserita/rimossa> <specifica il numero di posizioni occupate>; in the positions <to the right/left> of the tile that has just been <placed/removed> <specify the number of occupied positions>
+nessuna tessera è posizionata; no tiles are placed
+tutte le tessere sono posizionate; all the tiles are placed
+almeno <1,2,3,4> tessera/e sono posizionate/è posizionata; at least <1,2,3,4> tile(s) is/are placed
+meno di <2,3,4,5> tessere sono posizionate; less than <2,3,4,5> tiles are placed
+nell’insieme delle tessere a <destra/sinistra> della tessera appena <inserita/rimossa> è presente <specifica>; in the set of tiles placed to the <right/left> of the tile that has just been <placed/removed> there is <specific>
+un’operazione; a math expression
+un numero composto da più tessere cifra; a number composed of more than one tile
+la tessera appena <inserita/rimossa> è una tessera <tipologia>; the tile that has just been <placed/removed> is a <type> tile
+Si possiede il badge <specifica>; the badge <specifica> is owned
+È in corso il livello <specifica> del gioco; a/the level <specific> is ongoing
+minore di <N>; lower than
+maggiore di <N>; higher than
+Si hanno <specifica> punti; <specify> experience points are owned
+almeno N; at least N
+meno di N; less than N
+Si è al livello esperienza <specifica>; the experience level <specify> is reached
+the exercise number <N> is ongoing
